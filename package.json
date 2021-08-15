@@ -10,7 +10,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/miraipr0ject/miraiv2.git"
+		"url": "git+https://github.com/manhkhac/mirai-1.2.8.git"
 	},
 	"keywords": [
 		"bot",
@@ -27,7 +27,7 @@
 	"bugs": {
 		"url": "https://github.com/manhkhac/mirai-1.2.8/issues"
 	},
-	"homepage": "https://github.com/miraipr0ject/miraiv2#readme",
+	"homepage": "https://github.com/manhkhac/mirai-1.2.8#readme",
 	"dependencies": {
 		"@miraipr0ject/assets": "",
 		"axios": "",
