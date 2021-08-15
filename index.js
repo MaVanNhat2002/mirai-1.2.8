@@ -59,7 +59,7 @@ function startBot(message) {
 //========= Check update from Github =========//
 ////////////////////////////////////////////////
 
-axios.get('https://raw.githubusercontent.com/manhkhac/mirai-1.2.8/master/package.json').then((res) => {
+axios.get('https://raw.githubusercontent.com/manhkhac/mirai-1.2.8/main/package.json').then((res) => {
     logger("Đang kiểm tra cập nhật...", "[ CHECK UPDATE ]");
     const local = JSON.parse(readFileSync('./package.json'));
     if (semver.lt(local.version, res.data.version)) {
