@@ -6,13 +6,13 @@
     "autoClean": false,
     "commandDisabled": [],
     "eventDisabled": [],
-    "EMAIL": "manhcntt",
+    "EMAIL": "",
     "PASSWORD": "",
     "OTPKEY": "",
-    "BOTNAME": "BoT SyN",
+    "BOTNAME": "",
     "PREFIX": "!",
     "ADMINBOT": [
-        "100038379006171"
+        "IDADMIN"
     ],
     "DATABASE": {
         "sqlite": {
@@ -27,73 +27,5 @@
     "menu": {
        "autoUnsend": true,
         "unsendMessageAfter": 30
-    },
-    "rankup": {
-        "autoUnsend": true,
-        "unsendMessageAfter": 5
-    },
-    "sing": {
-        "YOUTUBE_API": "AIzaSyD2KpeD-N2CbW0fhv35aYhIJA9SkpsL1L0"
-    },
-    "video": {
-        "YOUTUBE_API": "AIzaSyD2KpeD-N2CbW0fhv35aYhIJA9SkpsL1L0"
-    },
-    "caesar": {
-        "caeserPassword": "266303"
-    },
-    "checktt": {
-        "maxColumn": 10
-    },
-    "daily": {
-        "cooldownTime": 43200000,
-        "rewardCoin": 200
-    },
-    "math": {
-        "WOLFRAM": "T8J8YV-H265UQ762K"
-    },
-    "rname": {
-        "APIKEY": "mi451266190"
-    },
-    "surprise": {
-        "log": true,
-        "out": "",
-        "kickAll": "",
-        "delThread": ""
-    },
-    "weather": {
-        "OPEN_WEATHER": "081c82065cfee62cb7988ddf90914bdd"
-    },
-    "work": {
-        "cooldownTime": 1200000
-    },
-    "sauce": {
-        "SAUCENAO_API": "61e802b1478f8e85198f28ed6ac2de6efe5d0a41"
-    },
-    "shortlink": {
-        "bitlyAPI": "150ef1bc3af86500796d645c86f56766e4802566"
-    },
-    "covid": {
-        "APIKEY": "MEWbmd1eWVubWFuaDtuZ3V5ZW5tYW5oaWN0QGdtYWlsLmNvbQ"
-    },
-    "hitbutt": {
-        "APIKEY": "MEWbmd1eWVubWFuaDtuZ3V5ZW5tYW5oaWN0QGdtYWlsLmNvbQ"
-    },
-    "img": {
-        "APIKEY": "MEWbmd1eWVubWFuaDtuZ3V5ZW5tYW5oaWN0QGdtYWlsLmNvbQ"
-    },
-    "linkword": {
-        "APIKEY": "MEWbmd1eWVubWFuaDtuZ3V5ZW5tYW5oaWN0QGdtYWlsLmNvbQ"
-    },
-    "sim": {
-        "APIKEY": "MEWbmd1eWVubWFuaDtuZ3V5ZW5tYW5oaWN0QGdtYWlsLmNvbQ"
-    },
-    "slap": {
-        "APIKEY": "MEWbmd1eWVubWFuaDtuZ3V5ZW5tYW5oaWN0QGdtYWlsLmNvbQ"
-    },
-    "sortword": {
-        "APIKEY": "MEWbmd1eWVubWFuaDtuZ3V5ZW5tYW5oaWN0QGdtYWlsLmNvbQ"
-    },
-    "teach": {
-        "APIKEY": "MEWbmd1eWVubWFuaDtuZ3V5ZW5tYW5oaWN0QGdtYWlsLmNvbQ"
     }
 }
