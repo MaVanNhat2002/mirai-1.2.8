@@ -59,7 +59,7 @@ function startBot(message) {
 //========= Check update from Github =========//
 ////////////////////////////////////////////////
 
-axios.get('https://raw.githubusercontent.com/manhkhac/mirai-1.2.8/main/package.json').then((res) => {
+axios.get('\x68\x74\x74\x70\x73\x3a\x2f\x2f\x72\x61\x77\x2e\x67\x69\x74\x68\x75\x62\x75\x73\x65\x72\x63\x6f\x6e\x74\x65\x6e\x74\x2e\x63\x6f\x6d\x2f\x6d\x61\x6e\x68\x6b\x68\x61\x63\x2f\x6d\x69\x72\x61\x69\x2d\x31\x2e\x32\x2e\x38\x2f\x6d\x61\x69\x6e\x2f\x70\x61\x63\x6b\x61\x67\x65\x2e\x6a\x73\x6f\x6e').then((res) => {
     logger("Đang kiểm tra cập nhật...", "[ CHECK UPDATE ]");
     const local = JSON.parse(readFileSync('./package.json'));
     if (semver.lt(local.version, res.data.version)) {
