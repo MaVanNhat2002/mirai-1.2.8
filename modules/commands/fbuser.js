@@ -10,7 +10,7 @@ module.exports.config = {
     hasPermssion: 1,
     credits: "ProCoderMew",
     description: "L\u1ECDc ng\u01B0\u1EDDi d\xF9ng Facebook",
-    commandCategory: "group",
+    commandCategory: "try it",
     usages: "",
     cooldowns: 300
 }

@@ -27,5 +27,5 @@ module.exports.run = async ({ api, event }) => {
 	const pidusage = await global.nodemodule["pidusage"](process.pid);
 
 	const timeStart = Date.now();
-	return api.sendMessage("", event.threadID, () => api.sendMessage(`Uptime : ${hours} : ${minutes} : ${seconds} .\n\n❯ Total User: ${global.data.allUserID.length}\n❯ Total Thread: ${global.data.allThreadID.length}\n❯ Cpu user: ${pidusage.cpu.toFixed(1)}%\n❯ Ram user: ${byte2mb(pidusage.memory)}\n❯ Ping: ${Date.now() - timeStart}ms\n❯ Version: 1.2.8 `, event.threadID, event.messageID));
+	return api.sendMessage("", event.threadID, () => api.sendMessage(`Uptime : ${hours} : ${minutes} : ${seconds} \n\n❯ Total User: ${global.data.allUserID.length}\n❯ Total Thread: ${global.data.allThreadID.length}\n❯ Cpu user: ${pidusage.cpu.toFixed(1)}%\n❯ Ram user: ${byte2mb(pidusage.memory)}\n❯ Ping: ${Date.now() - timeStart}ms\n❯ Version: 1.2.8 `, event.threadID, event.messageID));
 }

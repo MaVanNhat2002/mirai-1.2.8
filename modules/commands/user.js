@@ -21,7 +21,8 @@ module.exports.handleReaction = async ({ event, api, Users, handleReaction }) =>
 			api.sendMessage(`[${handleReaction.target} | ${name}] Đã ban thành công!`, event.threadID, () => api.unsendMessage(handleReaction.messageID));
 			break;
 		}
-		case "unban": {
+		case "unban":
+    case "-u": {
 			const name = global.data.userName.get(handleReaction.target) || await Users.getNameUser(handleReaction.target);
 			const data = (await Users.getData(handleReaction.target)).data || {};
 			data.banned = 0;
@@ -58,7 +59,8 @@ module.exports.run = async ({ event, api, args, Users }) => {
 			}
 			break;
 		}
-		case "unban": {
+		case "unban":
+    case "-ub": {
 			if (content.length == 0) return api.sendMessage("Bạn cần phải nhập ID thread cần ban!", event.threadID);
 			for (let idUser of content) {
 				idUser = parseInt(idUser);
@@ -78,7 +80,9 @@ module.exports.run = async ({ event, api, args, Users }) => {
 			}
 			break;
 		}
-		case "search": {
+		case "search":
+    case "s":
+    case "-s": {
 			let contentJoin = content.join(" ");
 			let getUsers = (await Users.getAll(['userID', 'name'])).filter(item => !!item.name);
 			let matchUsers = [], a = '', b = 0;

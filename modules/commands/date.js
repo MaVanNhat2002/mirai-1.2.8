@@ -4,8 +4,8 @@ module.exports.config = {
 	hasPermssion: 0/1/2, // Quyền hạn sử dụng, với 0 là toàn bộ thành viên, 1 là quản trị viên trở lên, 2 là admin/owner
 	credits: "BerVer", // Công nhận module sở hữu là ai
 	description: "Kiểm ra lịch", // Thông tin chi tiết về lệnh
-	commandCategory: "group", // Thuộc vào nhóm nào
-	usages: "lich", // Cách sử dụng lệnh
+	commandCategory: "other", // Thuộc vào nhóm nào
+	usages: "", // Cách sử dụng lệnh
 	cooldowns: 5, // Thời gian một người có thể lặp lại lệnh
 	dependencies: {
 		"amlich":"",

@@ -27,7 +27,7 @@ module.exports.handleReply = async function({ api, event, args, Threads, handleR
           data.banned = 1;
           await Threads.setData(idgr, { data });
           global.data.threadBanned.set(parseInt(idgr), 1);
-          api.sendMessage(`[${idgr}] Đã ban thành công!`, event.threadID, event.messageID);
+          api.sendMessage(`[${idgr}] Đã ban thành công!`, event.threadID, () => api.unsendMessage(idgr));
           break;
         }
 

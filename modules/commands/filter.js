@@ -9,7 +9,7 @@ module.exports.config = {
 	hasPermssion: 1,
 	credits: "ProCoderMew",
 	description: "Lọc cá cảnh trong group",
-	commandCategory: "group",
+	commandCategory: "try it",
 	usages: "[num]",
 	cooldowns: 30
 };

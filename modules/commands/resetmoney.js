@@ -4,7 +4,7 @@
     hasPermssion: 1,
     credits: "manhIT",
     description: "Reset số tiền của cả nhóm về 0",
-    commandCategory: "admin",
+    commandCategory: "group",
     usages: "[cc], [del], [all]",
     cooldowns: 5
 };

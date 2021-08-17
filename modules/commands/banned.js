@@ -17,26 +17,24 @@ module.exports.handleReply = async function({ api, args, Users, handleReply, eve
   var uid = uidx.slice(1);
 
   switch (handleReply.type) {
-
     case "unbanthread":
       {
         const data = (await Threads.getData(uid)).data || {};
         data.banned = 0;
         await Threads.setData(uid, { data });
-        global.data.threadBanned.delete(uid, 1);
-        return api.sendMessage(`[${myString}] unbanSuccess!`, threadID);
+        global.data.threadBanned.delete(parseInt(uid), 1);
+        api.sendMessage(`[${uid}] unBanSuccess!`, threadID);
         break;
       }
 
-    case 'unbanuser':
+    case "unbanuser":
       {
+        const name = global.data.userName.get(uid) || await Users.getNameUser(uid);
         const data = (await Users.getData(uid)).data || {};
-        data.banned = false;
-        data.reason = null;
-        data.dateAdded = null;
+        data.banned = 0;
         await Users.setData(uid, { data });
-        global.data.userBanned.delete(uid);
-        api.sendMessage(`${myString} unbanSuccess`, threadID);
+        global.data.userBanned.delete(parseInt(uid));
+        api.sendMessage(`[${uid} | ${name}] unBanSuccess!`, threadID);
         break;
       }
   }

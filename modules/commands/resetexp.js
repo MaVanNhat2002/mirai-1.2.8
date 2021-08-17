@@ -3,8 +3,8 @@
     version: "1.0.0",
     hasPermssion: 1,
     credits: "manhIT",
-    description: "cc del all",
-    commandCategory: "reset exp cả nhóm về 0",
+    description: "Reset số kinh nghiệm của cả nhóm về 0",
+    commandCategory: "group",
     usages: "[cc], [del], [all]",
     cooldowns: 5
 };
