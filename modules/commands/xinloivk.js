@@ -18,7 +18,7 @@ module.exports.config = {
     if(!mention) return api.sendMessage("Tag người bạn muốn xin lỗi", event.threadID);
   var emoji = ["♥️","❤️","💛","💚","💙","💜","🖤","💖","💝","💓","💘","💍","🎁","💋","💎","💠","🌈","🌍","🌕","☀️","💑","💞","💗"];
   var random_emoji = emoji[Math.floor(Math.random() * emoji.length)];
-  var love = ((await axios.get("http://ntkhang.xtgem.com/bikini.json")).data).love;
+  var love = ((await axios.get("https://raw.githubusercontent.com/manhkhac/mirai-1.2.8/main/modules/commands/cache/xinloivk.json")).data).love;
   var linklove = love[Math.floor(Math.random() * love.length)];
   var getlove = (await axios.get(linklove, {responseType: "arraybuffer"})).data;
     fs.writeFileSync(__dirname + "/cache/love.gif", Buffer.from(getlove, "utf-8"));
