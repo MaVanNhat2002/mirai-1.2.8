@@ -27,7 +27,7 @@ module.exports.onLoad = async() => {
     const dirMaterial = __dirname + `/cache/canvas/`;
     const path = resolve(__dirname, 'cache/canvas', 'hit_butt.png');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://git.meewmeew.info/data/hitbutt.png", path);
+    if (!existsSync(path)) await downloadFile("https://raw.githubusercontent.com/manhkhac/mirai-1.2.8/main/data/hitbutt.png", path);
 }
 
 async function makeImage({ one, two }) {
