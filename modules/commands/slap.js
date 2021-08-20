@@ -5,7 +5,7 @@
 
 module.exports.config = {
     name: "slap",
-    version: "2.2.5",
+    version: "2.2.2",
     hasPermssion: 0,
     credits: "ProCoderMew",
     description: "",
@@ -17,9 +17,6 @@ module.exports.config = {
         "fs-extra": "",
         "path": "",
         "jimp": ""
-    },
-    envConfig: {
-        APIKEY: ""
     }
 };
 
@@ -33,7 +30,6 @@ module.exports.onLoad = async() => {
     if (!existsSync(path)) await downloadFile("https://git.meewmeew.info/data/slap.png", path);
 }
 async function makeImage({ one, two }) {    
-    const { APIKEY } = global.configModule.slap;
     const fs = global.nodemodule["fs-extra"];
     const path = global.nodemodule["path"];
     const axios = global.nodemodule["axios"];
@@ -42,19 +38,14 @@ async function makeImage({ one, two }) {
 
     let slap_image = await jimp.read(__root + "/slap.png");
     let pathImg = __root + `/slap_${one}_${two}.png`;
-    try {
-        var avatarOne = (await axios.get(`https://meewmeew.info/avatar/${one}?apikey=${APIKEY}`)).data;    
-        var avatarTwo = (await axios.get(`https://meewmeew.info/avatar/${two}?apikey=${APIKEY}`)).data;
-    } catch (e) {
-        let raw = await slap_image.getBufferAsync("image/png");    
-        fs.writeFileSync(pathImg, raw);
-        return pathImg;
-    } 
+    let avatarOne = (await axios.get(`https://meewmeew.info/avatar/${one}`)).data;    
+    let avatarTwo = (await axios.get(`https://meewmeew.info/avatar/${two}`)).data;    
     let circleOne = await jimp.read(await circle(Buffer.from(avatarOne, 'utf-8')));
     let circleTwo = await jimp.read(await circle(Buffer.from(avatarTwo, 'utf-8')));
     slap_image.composite(circleOne.resize(150, 150), 745, 25).composite(circleTwo.resize(140, 140), 180, 40);
     
-    let raw = await slap_image.getBufferAsync("image/png");    
+    let raw = await slap_image.getBufferAsync("image/png");
+    
     fs.writeFileSync(pathImg, raw);
     return pathImg;
 }
