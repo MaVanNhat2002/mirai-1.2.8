@@ -28,14 +28,14 @@ module.exports.run = async function ({ event, api, Currencies, args }) {
                         message.push(singleID);
                     } catch (e) { error.push(e);  console.log(e) };
                 }
-                return api.sendMessage(`[exp] Đã cộng thêm ${exp}$ cho ${message.length} người`, threadID, function () { if (error.length != 0) return api.sendMessage(`[Error] Không thể thể cộng thêm exp cho ${error.length} người!`, threadID) }, messageID);
+                return api.sendMessage(`[exp] Đã cộng thêm ${exp} cho ${message.length} người`, threadID, function () { if (error.length != 0) return api.sendMessage(`[Error] Không thể thể cộng thêm exp cho ${error.length} người!`, threadID) }, messageID);
             } else {
                 if (!exp || isNaN(exp)) return throwError(this.config.name, threadID, messageID);
                 try {
                     await Currencies.increaseexp(senderID, exp);
                     message.push(senderID);
                 } catch (e) { error.push(e) };
-                return api.sendMessage(`[exp] Đã cộng thêm ${exp}$ cho bản thân`, threadID, function () { if (error.length != 0) return api.sendMessage(`[Error] Không thể thể cộng thêm exp cho bản thân!`, threadID) }, messageID);
+                return api.sendMessage(`[exp] Đã cộng thêm ${exp} cho bản thân`, threadID, function () { if (error.length != 0) return api.sendMessage(`[Error] Không thể thể cộng thêm exp cho bản thân!`, threadID) }, messageID);
             }
         }
 
@@ -48,14 +48,14 @@ module.exports.run = async function ({ event, api, Currencies, args }) {
                         message.push(singleID);
                     } catch (e) { error.push(e) };
                 }
-                return api.sendMessage(`[exp] Đã set thành công ${exp}$ cho ${message.length} người`, threadID, function () { if (error.length != 0) return api.sendMessage(`[Error] Không thể set exp cho ${error.length} người!`, threadID) }, messageID);
+                return api.sendMessage(`[exp] Đã set thành công ${exp} cho ${message.length} người`, threadID, function () { if (error.length != 0) return api.sendMessage(`[Error] Không thể set exp cho ${error.length} người!`, threadID) }, messageID);
             } else {
                 if (!exp || isNaN(exp)) return throwError(this.config.name, threadID, messageID);
                 try {
                     await Currencies.setData(senderID, { exp });
                     message.push(senderID);
                 } catch (e) { error.push(e) };
-                return api.sendMessage(`[exp] Đã set thành công ${exp}$ cho bản thân`, threadID, function () { if (error.length != 0) return api.sendMessage(`[Error] Không thể set exp cho bản thân!`, threadID) }, messageID);
+                return api.sendMessage(`[exp] Đã set thành công ${exp} cho bản thân`, threadID, function () { if (error.length != 0) return api.sendMessage(`[Error] Không thể set exp cho bản thân!`, threadID) }, messageID);
             }
         }
 
