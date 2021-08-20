@@ -3,13 +3,12 @@
 	"change": ["sim", "img"],
 	"modules": {
 		"commands": {
-			"adduser": "2.4.1",		
-			"fbuser": "2.0.0",
 			"img": "3.1.2",
 			"linkword": "2.0.9",
 			"meewmeew": "2.2.7",
 			"sim": "4.3.7",
 			"sortword": "1.1.2",
+			"linkword": "2.0.9",
 			"teach": "2.0.6"
 		},
 		"events": {

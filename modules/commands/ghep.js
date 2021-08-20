@@ -58,7 +58,7 @@ module.exports.run = async({ event, api, Currencies, args }) => {
     var money = data.money;
 
     if (money < 1000) {
-        api.sendMessage("Bạn cần 1000 đô cho 1 lần ghép hãy tích cực làm việc hoặc xin admin bot!\nCó làm mới có ăn🤑", threadID, messageID)
+        api.sendMessage("Bạn cần 500 đô cho 1 lần ghép hãy tích cực làm việc hoặc xin admin bot!\nCó làm mới có ăn🤑", threadID, messageID)
     } else {
 
         try {
@@ -75,10 +75,10 @@ module.exports.run = async({ event, api, Currencies, args }) => {
             api.changeNickname(`${(userData.gender == 2) ? "Vợ của" : (userData.gender == 1) ? "Chồng của" : "Bêđê"} ${userData.name} ${emoji}`, threadID, userIDRandom);
             api.changeNickname(`${(userData.gender == 2) ? "Chồng của" : (userData.gender == 1) ? "Vợ của" : "Bêđê"} ${userDataRandom.name} ${emoji}`, threadID, senderID);
 
-            Currencies.setData(senderID, options = { money: money - 1000 });
+            Currencies.setData(senderID, options = { money: money - 500 });
 
             return api.sendMessage({
-                body: `Bạn đã bị trừ 1000 đô.\nHai bạn đã ghép đôi thành công\nTỉ lệ hợp đôi: ${tl}\n ${emoji} ${userData.name} - ${userDataRandom.name} ${emoji}`,
+                body: `Bạn đã bị trừ 500 đô.\nHai bạn đã ghép đôi thành công\nTỉ lệ hợp đôi: ${tl}\n ${emoji} ${userData.name} - ${userDataRandom.name} ${emoji}`,
                 mentions: [{ tag: userData.name, id: senderID }, { tag: userDataRandom.name, id: userIDRandom }],
                 attachment: [avatarPath, avatarPathRandom],
             }, threadID, messageID);
