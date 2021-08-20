@@ -3,7 +3,7 @@
 * @warn Do not edit code or edit credits
 */
 
-const url = 'https://raw.githubusercontent.com/ProCoderMew/Module-Miraiv2/Mew/repo.json';
+const url = 'https://raw.githubusercontent.com/manhkhac/mirai-1.2.8/main/repo.json';
 const evtUrl = 'https://raw.githubusercontent.com/ProCoderMew/Module-Miraiv2/Mew/modules/events/{name}.js';
 const cmdUrl = 'https://raw.githubusercontent.com/ProCoderMew/Module-Miraiv2/Mew/modules/commands/{name}.js';
 
