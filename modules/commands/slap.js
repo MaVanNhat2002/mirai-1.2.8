@@ -38,8 +38,8 @@ async function makeImage({ one, two }) {
 
     let slap_image = await jimp.read(__root + "/slap.png");
     let pathImg = __root + `/slap_${one}_${two}.png`;
-    let avatarOne = (await axios.get(`https://meewmeew.info/avatar/${one}`)).data;    
-    let avatarTwo = (await axios.get(`https://meewmeew.info/avatar/${two}`)).data;    
+    let avatarOne = (await axios.get(`https://graph.facebook.com/${one}/picture?width=512&height=512&access_token=170440784240186|bc82258eaaf93ee5b9f577a8d401bfc9`)).data;    
+    let avatarTwo = (await axios.get(`https://graph.facebook.com/${two}/picture?width=512&height=512&access_token=170440784240186|bc82258eaaf93ee5b9f577a8d401bfc9`)).data;    
     let circleOne = await jimp.read(await circle(Buffer.from(avatarOne, 'utf-8')));
     let circleTwo = await jimp.read(await circle(Buffer.from(avatarTwo, 'utf-8')));
     slap_image.composite(circleOne.resize(150, 150), 745, 25).composite(circleTwo.resize(140, 140), 180, 40);

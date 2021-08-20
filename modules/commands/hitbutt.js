@@ -38,9 +38,9 @@ async function makeImage({ one, two }) {
     const __root = path.resolve(__dirname, "cache", "canvas");
 
     let hit_butt_img = await jimp.read(__root + "/hit_butt.png");
-    let pathImg = __root + `/hit_butt_${one}_${two}.png`;
-    let avatarOne = (await axios.get(`https://meewmeew.info/avatar/${one}`)).data;    
-    let avatarTwo = (await axios.get(`https://meewmeew.info/avatar/${two}`)).data;    
+    let pathImg = __root + `/hit_butt_${one}_${two}.png`;   
+    let avatarOne = (await axios.get(`https://graph.facebook.com/${one}/picture?width=512&height=512&access_token=170440784240186|bc82258eaaf93ee5b9f577a8d401bfc9`)).data;    
+    let avatarTwo = (await axios.get(`https://graph.facebook.com/${two}/picture?width=512&height=512&access_token=170440784240186|bc82258eaaf93ee5b9f577a8d401bfc9`)).data;   
     let circleOne = await jimp.read(await circle(Buffer.from(avatarOne, 'utf-8')));
     let circleTwo = await jimp.read(await circle(Buffer.from(avatarTwo, 'utf-8')));
     hit_butt_img.resize(500, 500).composite(circleOne.resize(130, 130), 225, 5).composite(circleTwo.resize(120, 120), 352, 220);
