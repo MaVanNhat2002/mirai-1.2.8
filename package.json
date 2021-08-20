@@ -37,7 +37,7 @@
 		"chalk": "",
 		"cheerio": "",
 		"child_process": "",
-		"eval": "^0.1.6",
+		"eval": "",
 		"fca-unofficial": "",
 		"figlet": "",
 		"fs-extra": "",
@@ -55,6 +55,6 @@
 		"sqlite3": "",
 		"string-similarity": "",
 		"totp-generator": "",
-		"ytdl-core": "^4.8.3"
+		"ytdl-core": ""
 	}
 }
