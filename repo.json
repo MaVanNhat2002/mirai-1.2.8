@@ -1,6 +1,6 @@
 {
 	"version": "2.2.24",
-	"change": ["hitbutt", "slap"],
+	"change": ["sim", "img"],
 	"modules": {
 		"commands": {
 			"adduser": "2.4.1",		
