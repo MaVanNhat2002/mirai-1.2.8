@@ -11,7 +11,7 @@ module.exports.config = {
 		"bitly": ""
 	},
 	envConfig: {
-		"bitlyAPI": ""
+		"bitlyAPI": "150ef1bc3af86500796d645c86f56766e4802566"
 	}
 };
 
