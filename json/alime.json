@@ -19,7 +19,6 @@
 		"futanari": "https://api.nekos.dev/api/v3/images/nsfw/img/futanari_lewd",
 		"kitsune": "https://api.nekos.dev/api/v3/images/nsfw/img/kitsune_ero",
 		"trap": "https://api.nekos.dev/api/v3/images/nsfw/img/trap",
-		"keta": "https://api.nekos.dev/api/v3/images/nsfw/img/keta_lewd",
 		"nekoEro": "https://api.nekos.dev/api/v3/images/nsfw/img/neko_ero",
 		"cum": "https://api.nekos.dev/api/v3/images/nsfw/img/cum_lewd",
 		"anal": "https://api.nekos.dev/api/v3/images/nsfw/img/anal_lewd",
@@ -27,7 +26,7 @@
 		"all": "https://api.nekos.dev/api/v3/images/nsfw/img/all_tags_lewd",
 		"yuri": "https://api.nekos.dev/api/v3/images/nsfw/img/yuri_lewd",
 		"pussy": "https://api.nekos.dev/api/v3/images/nsfw/img/pussy_lewd",
-		"feet": "https://api.nekos.dev/api/v3/images/nsfw/img/yuri_ero",
+		"yuri_ero": "https://api.nekos.dev/api/v3/images/nsfw/img/yuri_ero",
 		"blowJob": "https://api.nekos.dev/api/v3/images/nsfw/img/blowjob_lewd",
 		"lewdLoli": "https://api.lolis.life/random?category=lewd&nsfw=true"
 	},
