@@ -6,7 +6,7 @@
 module.exports.config = {
     name: "antiout",
     eventType: ["log:unsubscribe"],
-    version: "1.0.7",
+    version: "1.0.0",
     credits: "ProCoderMew",
     description: "Listen events",
     dependencies: {
@@ -16,7 +16,7 @@ module.exports.config = {
 
 module.exports.run = async function ({ api, event, Users }) {
     const { resolve } = global.nodemodule["path"];
-    const path = resolve(__dirname, '../commands', 'cache', 'meewmeew.json');
+    const path = resolve(__dirname, '../commands', 'cache', 'manhG.json');
     const { antiout } = require(path);
     const { logMessageData, author, threadID } = event;
     const id = logMessageData.leftParticipantFbId;
