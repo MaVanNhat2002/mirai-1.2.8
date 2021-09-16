@@ -5,9 +5,9 @@
 
 module.exports.config = {
     name: "alime",
-    version: "1.1.2",
+    version: "1.0.0",
     hasPermssion: 0,
-    credits: "ProCoderMew ManhGF",
+    credits: "ProCoderMew,ManhG hack",
     description: "alime sfw và cả alime nsfw :)",
     commandCategory: "nsfw",
     usages: "[tag]",
